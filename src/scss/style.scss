@@ -1,0 +1,13 @@
+@import 'page-main';
+@import 'banner-form';
+@import 'banner-preview';
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+}
