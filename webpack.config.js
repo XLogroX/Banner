@@ -43,8 +43,6 @@ const getJsLoaders = () => {
   return loaders;
 };
 
-console.log(getCssLoaders());
-
 module.exports = {
   context: path.resolve(__dirname, 'src'),
   mode: 'development',
@@ -61,7 +59,7 @@ module.exports = {
   },
   devtool: isDevelopment ? 'source-map': false,
   devServer: {
-    port: 3000,
+    port: 3999,
     hot: true,
     open: true,
   },

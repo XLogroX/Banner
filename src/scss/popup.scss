@@ -1,0 +1,26 @@
+.popup {
+  position: absolute;
+  @include center;
+  display: flex;
+  font-size: 25px;
+  padding: 10px;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+  min-height: 130px;
+  background-color: white;
+  border-radius: 6px;
+  border: 1px solid rgb(161, 158, 158);
+}
+
+.popup__close {
+  position: absolute;
+  border-width: 1px;
+  top: 0;
+  right: -1px;
+  width: 35px;
+  height: 35px;
+  font-size: 20px;
+  font-weight: bold;
+}
