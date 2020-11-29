@@ -3,16 +3,25 @@ import Observer from '../Observer';
 class UserData extends Observer {
   constructor() {
     super();
-    this._data = {};
+    this._data = {
+      text: '',
+      color: '',
+      link: '',
+      image: '',
+    };
   }
 
-  update(data) {
+  update(eventName, data) {
     this._data = Object.assign(
         {},
         this._data,
         data,
     );
-    this._notify(data);
+    this._notify(eventName, data);
+  }
+
+  get userData() {
+    return this._data;
   }
 }
 

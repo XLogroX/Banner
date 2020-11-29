@@ -1,6 +1,84 @@
 .banner-form {
-  width: 200px;
-  height: 300px;
-  border: 1px solid black;
+  position: relative;
+  width: 500px;
+  min-height: 300px;
+  border: 1px solid rgb(161, 158, 158);
   border-radius: 3%;
+  padding: 10px;
+  background-color: #f7ede8cc;
+  box-shadow: 0 0 10px 0 rgb(184, 183, 183);
+}
+
+.banner-form__description-field {
+  resize: none;
+}
+
+.banner-form__text-form {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.banner-form__description-field {
+  width: 100%;
+  height: 10vw;
+  border-radius: 5px;
+}
+
+.banner-form__color-selection,
+.banner-form__link-selection,
+.banner-form__image-selection,
+.banner-form__text-form {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.banner-form__controls {
+  display: flex;
+  justify-content: space-between;
+}
+
+.banner-form__link-field {
+  @include field;
+}
+
+.banner-form__image-field {
+  @include field;
+}
+
+.banner-form__color-field {
+  width: 40px;
+  height: 40px;
+  padding: 13%;
+  border-radius: 50%;
+  background-color: white;
+  outline: none;
+}
+
+.banner-form__color-field:hover,
+.banner-form__color-field:focus {
+  box-shadow: 0 0 5px 0 green;
+}
+
+.banner-form__color-field:active {
+  box-shadow: 0 0 5px 2px green;
+}
+
+.banner-form__color-wrapper {
+  position: relative;
+  margin-left: 20px;
+}
+
+.banner-form__color-wrapper::after {
+  content: '';
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 93%;
+  height: 93%;
+  border-radius: 50%;
+  background-image: radial-gradient(circle,transparent 30%, white 32%);
 }
