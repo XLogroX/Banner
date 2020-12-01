@@ -26,7 +26,7 @@ const bannerStyle = {
 const textContainerStyle = {
   'margin': '0',
   'marginTop': 'auto',
-  'overflow': 'hidden',
+  'wordBreak': 'break-word',
 };
 
 export {RENDER_POSITION, BANNER_HEIGHT, BANNER_WIDTH, ROWS_LIMIT, bannerStyle, textContainerStyle};

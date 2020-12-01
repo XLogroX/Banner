@@ -50,7 +50,12 @@ let handleText = () => {
         rows[lastElementIndex] = rows[lastElementIndex].slice(0, index);
         span.innerHTML = rows.join('<br>');
       } else if (rows[lastElementIndex].lastIndexOf(' ') === -1) {
-        rows = rows.slice(0, lastElementIndex);
+        rows[lastElementIndex] = rows[lastElementIndex].slice(0, rows[lastElementIndex].length - 1);
+
+        if (!rows[lastElementIndex]) {
+          rows = rows.slice(0, lastElementIndex);
+        }
+
         span.innerHTML = rows.join('<br>');
       } else {
         break;
