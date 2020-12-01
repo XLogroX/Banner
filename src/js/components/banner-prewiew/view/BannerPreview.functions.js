@@ -24,6 +24,10 @@ let handleText = () => {
       data.trim().split('\n').slice(0, ROWS_LIMIT) :
       data.trim().split('\n');
 
+    rows = rows.filter((row) => {
+      return row;
+    });
+
     if (lengthLimitation && rows.join('<br>').length > lengthLimitation) {
       return;
     } else {
